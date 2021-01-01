@@ -16,5 +16,6 @@ static const char* osModuleSource =
 "  foreign static cwd\n"
 "  foreign static pid\n"
 "  foreign static ppid\n"
+"  foreign static exePath\n"
 "  foreign static version\n"
 "}\n";

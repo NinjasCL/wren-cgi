@@ -25,11 +25,14 @@ extern void fileWriteBytes(WrenVM* vm);
 extern void platformHomedir(WrenVM* vm);
 extern void platformIsPosix(WrenVM* vm);
 extern void platformName(WrenVM* vm);
+
 extern void processAllArguments(WrenVM* vm);
 extern void processCwd(WrenVM* vm);
 extern void processPid(WrenVM* vm);
 extern void processPpid(WrenVM* vm);
+extern void processExePath(WrenVM* vm);
 extern void processVersion(WrenVM* vm);
+
 extern void statPath(WrenVM* vm);
 extern void statBlockCount(WrenVM* vm);
 extern void statBlockSize(WrenVM* vm);
@@ -174,6 +177,7 @@ static ModuleRegistry modules[] =
       STATIC_METHOD("cwd", processCwd)
       STATIC_METHOD("pid", processPid)
       STATIC_METHOD("ppid", processPpid)
+      STATIC_METHOD("exePath", processExePath)
       STATIC_METHOD("version", processVersion)
     END_CLASS
   END_MODULE
