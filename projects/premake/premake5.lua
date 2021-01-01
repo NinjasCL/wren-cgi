@@ -65,7 +65,9 @@ project "wren_cli"
   files {
     "../../deps/wren/include/**.h",
     "../../deps/wren/src/**.c",
-    "../../deps/wren/src/**.h"
+    "../../deps/wren/src/**.h",
+    "../../deps/cgic/cgic.c",
+    "../../deps/cgic/cgic.h",
   }
 
   includedirs {
@@ -151,7 +153,7 @@ project "wren_cli"
       "../../deps/libuv/src/win/*.h",
       "../../deps/libuv/src/win/*.c"
     }
-  
+
   filter "system:bsd"
     links { "pthread", "dl", "m" }
     files {
