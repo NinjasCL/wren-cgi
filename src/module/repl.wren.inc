@@ -1,4 +1,4 @@
-// Generated automatically from src/module/repl.wren. Do not edit.
+// Generated automatically from ./src/module/repl.wren. Do not edit.
 static const char* replModuleSource =
 "import \"meta\" for Meta\n"
 "import \"io\" for Stdin, Stdout\n"

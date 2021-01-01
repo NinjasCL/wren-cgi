@@ -1,4 +1,4 @@
-// Generated automatically from src/module/scheduler.wren. Do not edit.
+// Generated automatically from ./src/module/scheduler.wren. Do not edit.
 static const char* schedulerModuleSource =
 "class Scheduler {\n"
 "  static add(callable) {\n"

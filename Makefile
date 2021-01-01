@@ -1,4 +1,20 @@
-.PHONY: premake make-bsd make-make make-macos help repl version
+.PHONY: premake make-bsd make-make make-macos help repl version include scratch scratch-touch test
+
+# This is just a test file for quick testing
+st scratch-touch:
+	touch scratch.wren
+
+s scratch:
+	bin/wren_cli scratch.wren
+
+# Execute tests in test directory
+t test:
+	python3 util/test.py
+
+# Execute build all when adding a new module
+a all:
+	make include
+	make premake
 
 p premake:
 # Install premake in your PATH (normally /usr/local/bin)
@@ -6,14 +22,18 @@ p premake:
 # Add any dependency in projects/premake/premake5.lua
 	python3 util/generate_projects.py
 
+i inc include:
+# Creates all wren.inc files
+	find ./src -name "*.wren" | xargs -I{} util/wren_to_c_string.py {}.inc {}
+
 # Shortcuts to building projects
-mb make-bsd:
+mb bsd:
 	cd projects/make.bsd && make
 
-mk make-make:
+mk make:
 	cd projects/make && make
 
-mm make-macos:
+mm macos:
 	cd projects/make.mac && make
 
 # Simple testing commands

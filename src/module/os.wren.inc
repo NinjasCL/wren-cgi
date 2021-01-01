@@ -1,4 +1,4 @@
-// Generated automatically from src/module/os.wren. Do not edit.
+// Generated automatically from ./src/module/os.wren. Do not edit.
 static const char* osModuleSource =
 "class Platform {\n"
 "  foreign static homedir\n"

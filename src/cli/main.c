@@ -10,16 +10,16 @@
 
 int showVersion() {
   printf("\\\\/\"-\n");
-  printf(" \\_/   Wren CGI v%s\n", WRENCGI_VERSION_STRING);
+  printf(" \\_/\tWren CGI v%s\n", WRENCGI_VERSION_STRING);
   return 0;
 }
 
 int showVersionExtended() {
   showVersion();
   printf("Dependencies:\n");
-  printf("- Wren: %s\n", WREN_VERSION_STRING);
-  printf("- Cgic: %s\n", CGIC_VERSION_STRING);
-  printf("- UV: %d.%d.%d\n", UV_VERSION_MAJOR, UV_VERSION_MINOR, UV_VERSION_PATCH);
+  printf("\t- Wren: %s\n", WREN_VERSION_STRING);
+  printf("\t- Cgic: %s\n", CGIC_VERSION_STRING);
+  printf("\t- UV: %d.%d.%d\n", UV_VERSION_MAJOR, UV_VERSION_MINOR, UV_VERSION_PATCH);
   return 0;
 }
 
@@ -33,6 +33,7 @@ int showHelp() {
   return 0;
 }
 
+// cgic.h implements main and call this.
 int cgiMain(int argc, const char* argv[])
 {
   if (argc == 2 && strcmp(argv[1], "--help") == 0)

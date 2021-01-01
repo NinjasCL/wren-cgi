@@ -40,6 +40,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\cgi">
+      <UniqueIdentifier>{4FF22FA9-BBD1-AE44-C4E9-391B304815A6}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\cli">
       <UniqueIdentifier>{F4F22FA9-60D2-AE44-69EA-391BD54815A6}</UniqueIdentifier>
     </Filter>
@@ -174,6 +177,9 @@
     <ClInclude Include="..\..\deps\wren\src\vm\wren_vm.h">
       <Filter>deps\wren\src\vm</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cgi\env.h">
+      <Filter>src\cgi</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\cli\modules.h">
       <Filter>src\cli</Filter>
     </ClInclude>
@@ -181,6 +187,9 @@
       <Filter>src\cli</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cli\stat.h">
+      <Filter>src\cli</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\cli\version.h">
       <Filter>src\cli</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cli\vm.h">
@@ -335,6 +344,9 @@
     <ClCompile Include="..\..\deps\wren\src\vm\wren_vm.c">
       <Filter>deps\wren\src\vm</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\cgi\env.c">
+      <Filter>src\cgi</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\cli\main.c">
       <Filter>src\cli</Filter>
     </ClCompile>
@@ -364,6 +376,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\src\cgi\env.wren.inc">
+      <Filter>src\cgi</Filter>
+    </None>
     <None Include="..\..\src\module\io.wren.inc">
       <Filter>src\module</Filter>
     </None>

@@ -60,6 +60,7 @@
 		F206A04684946A38ED6D0E86 /* tcp.c in Sources */ = {isa = PBXBuildFile; fileRef = E0AC076EA417C920E2BB6DAE /* tcp.c */; };
 		F30940FE8D6329F0C99B8F3E /* random-devurandom.c in Sources */ = {isa = PBXBuildFile; fileRef = 489ABEA6E67BBF58BDFA04E6 /* random-devurandom.c */; };
 		F8385EA665606D1866F35CE6 /* poll.c in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FB0CE8CC2A70002E1A70E /* poll.c */; };
+		FB9CE70D2B2EB5FF063BF54D /* env.c in Sources */ = {isa = PBXBuildFile; fileRef = 055E63F5A84C8AA737726A35 /* env.c */; };
 		FF584B7456BDBE6608CBD9B4 /* async.c in Sources */ = {isa = PBXBuildFile; fileRef = 7D73C6BCAF6D116E294C4CFC /* async.c */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		036EFC3D98E5BB6F0782127D /* sunos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = sunos.h; path = ../../deps/libuv/include/uv/sunos.h; sourceTree = "<group>"; };
 		039D8737D1C0DAE958CF2D77 /* darwin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = darwin.h; path = ../../deps/libuv/include/uv/darwin.h; sourceTree = "<group>"; };
 		0424D20BC6E5327D241A104B /* wren_primitive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_primitive.h; path = ../../deps/wren/src/vm/wren_primitive.h; sourceTree = "<group>"; };
+		055E63F5A84C8AA737726A35 /* env.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = env.c; path = ../../src/cgi/env.c; sourceTree = "<group>"; };
 		08DCB67379FF57652FC604B3 /* heap-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "heap-inl.h"; path = "../../deps/libuv/src/heap-inl.h"; sourceTree = "<group>"; };
 		098B94624D9F65944170EAA2 /* atomic-ops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "atomic-ops.h"; path = "../../deps/libuv/src/unix/atomic-ops.h"; sourceTree = "<group>"; };
 		0A65426939F7115B150450A9 /* uv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uv.h; path = ../../deps/libuv/include/uv.h; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		3E7434F5706D7FA7EA4CBB35 /* unix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = unix.h; path = ../../deps/libuv/include/uv/unix.h; sourceTree = "<group>"; };
 		3F14C04B967A333D48884E8B /* wren_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_common.h; path = ../../deps/wren/src/vm/wren_common.h; sourceTree = "<group>"; };
 		3F5FB0CE8CC2A70002E1A70E /* poll.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = poll.c; path = ../../deps/libuv/src/unix/poll.c; sourceTree = "<group>"; };
+		4316539FE6047A51752A59DF /* env.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = env.h; path = ../../src/cgi/env.h; sourceTree = "<group>"; };
 		43DFD3BA4492D0ACB874A1FA /* os.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = os.c; path = ../../src/module/os.c; sourceTree = "<group>"; };
 		456D6BEEDDBA51A00C01522E /* getaddrinfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = getaddrinfo.c; path = ../../deps/libuv/src/unix/getaddrinfo.c; sourceTree = "<group>"; };
 		46315B7C939451AE09B351BC /* pipe.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = pipe.c; path = ../../deps/libuv/src/unix/pipe.c; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		4EBCAEFAE14A78EC4A231D3A /* timer.wren.inc */ = {isa = PBXFileReference; lastKnownFileType = text; name = timer.wren.inc; path = ../../src/module/timer.wren.inc; sourceTree = "<group>"; };
 		4EC9A0A44F7C9D96C35E6EE4 /* os.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = os.h; path = ../../src/module/os.h; sourceTree = "<group>"; };
 		550A8B6655BD8858C99F59A6 /* io.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = io.c; path = ../../src/module/io.c; sourceTree = "<group>"; };
+		5778FDDE7FB3B690674F441E /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = version.h; path = ../../src/cli/version.h; sourceTree = "<group>"; };
 		594F904E4D4ED9C0D239EE8E /* wren_opt_meta.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_opt_meta.h; path = ../../deps/wren/src/optional/wren_opt_meta.h; sourceTree = "<group>"; };
 		5E55895EFC368A10D3B4CF9E /* random-getentropy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "random-getentropy.c"; path = "../../deps/libuv/src/unix/random-getentropy.c"; sourceTree = "<group>"; };
 		5F08F3FC434FFC2EC73D2A3C /* fsevents.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fsevents.c; path = ../../deps/libuv/src/unix/fsevents.c; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 		E0AC076EA417C920E2BB6DAE /* tcp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tcp.c; path = ../../deps/libuv/src/unix/tcp.c; sourceTree = "<group>"; };
 		E187FB9CDB49B80E1548B9DC /* os.wren.inc */ = {isa = PBXFileReference; lastKnownFileType = text; name = os.wren.inc; path = ../../src/module/os.wren.inc; sourceTree = "<group>"; };
 		EBC4191202D6B444F2F2AF52 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = main.c; path = ../../src/cli/main.c; sourceTree = "<group>"; };
+		EC2A4157398D3789AFAC3797 /* env.wren.inc */ = {isa = PBXFileReference; lastKnownFileType = text; name = env.wren.inc; path = ../../src/cgi/env.wren.inc; sourceTree = "<group>"; };
 		ECA5597CD7917F6E1F7747BC /* repl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = repl.c; path = ../../src/module/repl.c; sourceTree = "<group>"; };
 		EF3F899384B648C5F3529FD3 /* posix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = posix.h; path = ../../deps/libuv/include/uv/posix.h; sourceTree = "<group>"; };
 		F460E68EF7D1B8C0793E5CCE /* vm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = vm.c; path = ../../src/cli/vm.c; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 		5775D4184366DFCA959E7A58 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				744950E5C45CE59746DB1725 /* cgi */,
 				5E34860FAE481AC130C64C4F /* cli */,
 				5D108D0B60815F3DE1EE034B /* module */,
 			);
@@ -260,6 +266,7 @@
 				D69A4422EDACDF54DDC8DA62 /* path.c */,
 				C000D86CD713739EC72F6EAC /* path.h */,
 				0F964BCA26A8E6FC16C4E20A /* stat.h */,
+				5778FDDE7FB3B690674F441E /* version.h */,
 				F460E68EF7D1B8C0793E5CCE /* vm.c */,
 				89FC45988D6D17CA0ED9BBD8 /* vm.h */,
 			);
@@ -308,6 +315,16 @@
 				91FD967255695824940CFCB2 /* udp.c */,
 			);
 			name = unix;
+			sourceTree = "<group>";
+		};
+		744950E5C45CE59746DB1725 /* cgi */ = {
+			isa = PBXGroup;
+			children = (
+				055E63F5A84C8AA737726A35 /* env.c */,
+				4316539FE6047A51752A59DF /* env.h */,
+				EC2A4157398D3789AFAC3797 /* env.wren.inc */,
+			);
+			name = cgi;
 			sourceTree = "<group>";
 		};
 		76C1F5AB19B01C5DA8D5FBEB /* vm */ = {
@@ -520,6 +537,7 @@
 				C1893749DC55A5FBE0263D89 /* wren_utils.c in Sources */,
 				3EE5E6A159B255535D82ECE1 /* wren_value.c in Sources */,
 				21B20AAD65C5DBDF599760ED /* wren_vm.c in Sources */,
+				FB9CE70D2B2EB5FF063BF54D /* env.c in Sources */,
 				11AB2EAA6CEC821C4046CCEA /* main.c in Sources */,
 				E333D892545679840A1D26D2 /* modules.c in Sources */,
 				E0B432BA3BF5862C0F4FD0FA /* path.c in Sources */,
@@ -588,6 +606,7 @@
 				USER_HEADER_SEARCH_PATHS = (
 					../../src/cli,
 					../../src/module,
+					../../src/cgi,
 					../../deps/wren/include,
 					../../deps/wren/src/vm,
 					../../deps/wren/src/optional,
@@ -620,6 +639,7 @@
 				USER_HEADER_SEARCH_PATHS = (
 					../../src/cli,
 					../../src/module,
+					../../src/cgi,
 					../../deps/wren/include,
 					../../deps/wren/src/vm,
 					../../deps/wren/src/optional,

@@ -8,6 +8,10 @@
 #include "stat.h"
 #include "vm.h"
 
+// Wren CGI Modules
+#include "cgic.h"
+#include "env.h"
+
 // The single VM instance that the CLI uses.
 static WrenVM* vm;
 
@@ -239,9 +243,11 @@ static WrenForeignClassMethods bindForeignClass(
   return methods;
 }
 
+// Binding to System.print
 static void write(WrenVM* vm, const char* text)
 {
-  printf("%s", text);
+  // Use CGI output
+  fprintf(cgiOut, "%s", text);
 }
 
 static void reportError(WrenVM* vm, WrenErrorType type,

@@ -19,7 +19,7 @@ endif
 # #############################################
 
 RESCOMP = windres
-INCLUDES += -I../../src/cli -I../../src/module -I../../deps/wren/include -I../../deps/wren/src/vm -I../../deps/wren/src/optional -I../../deps/cgic -I../../deps/libuv/include -I../../deps/libuv/src
+INCLUDES += -I../../src/cli -I../../src/module -I../../src/cgi -I../../deps/wren/include -I../../deps/wren/src/vm -I../../deps/wren/src/optional -I../../deps/cgic -I../../deps/libuv/include -I../../deps/libuv/src
 FORCE_INCLUDE +=
 ALL_CPPFLAGS += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
 ALL_RESFLAGS += $(RESFLAGS) $(DEFINES) $(INCLUDES)
@@ -103,6 +103,7 @@ GENERATED += $(OBJDIR)/async.o
 GENERATED += $(OBJDIR)/cgic.o
 GENERATED += $(OBJDIR)/core.o
 GENERATED += $(OBJDIR)/dl.o
+GENERATED += $(OBJDIR)/env.o
 GENERATED += $(OBJDIR)/fs-poll.o
 GENERATED += $(OBJDIR)/fs.o
 GENERATED += $(OBJDIR)/getaddrinfo.o
@@ -158,6 +159,7 @@ OBJECTS += $(OBJDIR)/async.o
 OBJECTS += $(OBJDIR)/cgic.o
 OBJECTS += $(OBJDIR)/core.o
 OBJECTS += $(OBJDIR)/dl.o
+OBJECTS += $(OBJDIR)/env.o
 OBJECTS += $(OBJDIR)/fs-poll.o
 OBJECTS += $(OBJDIR)/fs.o
 OBJECTS += $(OBJDIR)/getaddrinfo.o
@@ -408,6 +410,9 @@ $(OBJDIR)/wren_value.o: ../../deps/wren/src/vm/wren_value.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(ALL_CFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/wren_vm.o: ../../deps/wren/src/vm/wren_vm.c
+	@echo $(notdir $<)
+	$(SILENT) $(CC) $(ALL_CFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
+$(OBJDIR)/env.o: ../../src/cgi/env.c
 	@echo $(notdir $<)
 	$(SILENT) $(CC) $(ALL_CFLAGS) $(FORCE_INCLUDE) -o "$@" -MF "$(@:%.o=%.d)" -c "$<"
 $(OBJDIR)/main.o: ../../src/cli/main.c

@@ -1,4 +1,4 @@
-// Generated automatically from src/module/timer.wren. Do not edit.
+// Generated automatically from ./src/module/timer.wren. Do not edit.
 static const char* timerModuleSource =
 "import \"scheduler\" for Scheduler\n"
 "\n"

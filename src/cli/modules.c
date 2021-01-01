@@ -8,6 +8,7 @@
 #include "repl.wren.inc"
 #include "scheduler.wren.inc"
 #include "timer.wren.inc"
+#include "env.wren.inc"
 
 extern void directoryList(WrenVM* vm);
 extern void fileAllocate(WrenVM* vm);
@@ -54,6 +55,9 @@ extern void stdinReadStop(WrenVM* vm);
 extern void stdoutFlush(WrenVM* vm);
 extern void schedulerCaptureMethods(WrenVM* vm);
 extern void timerStartTimer(WrenVM* vm);
+
+// Wren CGI modules
+extern void ENV_f_get(WrenVM * vm);
 
 // The maximum number of foreign methods a single class defines. Ideally, we
 // would use variable-length arrays for each class in the table below, but
@@ -191,6 +195,12 @@ static ModuleRegistry modules[] =
   MODULE(timer)
     CLASS(Timer)
       STATIC_METHOD("startTimer_(_,_)", timerStartTimer)
+    END_CLASS
+  END_MODULE
+
+  MODULE(env)
+    CLASS(Env)
+      STATIC_METHOD("f_get(_)", ENV_f_get)
     END_CLASS
   END_MODULE
 

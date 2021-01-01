@@ -58,6 +58,7 @@ project "wren_cli"
   includedirs {
     "../../src/cli",
     "../../src/module",
+    "../../src/cgi",
   }
 
 -- wren dependency
