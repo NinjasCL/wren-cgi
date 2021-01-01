@@ -1,0 +1,4 @@
+$ cat .gitattributes
+* text=auto
+*.wren linguist-language=Dart
+*.wren linguist-vendored
