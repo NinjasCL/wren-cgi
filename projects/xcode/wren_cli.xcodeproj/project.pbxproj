@@ -51,6 +51,7 @@
 		CB4D48D2BC44B6C428483712 /* getnameinfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 02A7B93A9AF49EECC93B9F7A /* getnameinfo.c */; };
 		D4BB20BFE6E4FD711AD5E6FF /* fs-poll.c in Sources */ = {isa = PBXBuildFile; fileRef = DC4FB627D611729910107467 /* fs-poll.c */; };
 		D7D3A3F1E9FD80A31DEE6A31 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 8B785739853A13ABBF391579 /* version.c */; };
+		D8E2B50E09C6AD001CDEE34E /* cgic.c in Sources */ = {isa = PBXBuildFile; fileRef = D33F3A56F9656A08606C6096 /* cgic.c */; };
 		DEDAE5283B61E99AC404A368 /* darwin-proctitle.c in Sources */ = {isa = PBXBuildFile; fileRef = D1349830E119C462CD8D4E70 /* darwin-proctitle.c */; };
 		E0B432BA3BF5862C0F4FD0FA /* path.c in Sources */ = {isa = PBXBuildFile; fileRef = D69A4422EDACDF54DDC8DA62 /* path.c */; };
 		E333D892545679840A1D26D2 /* modules.c in Sources */ = {isa = PBXBuildFile; fileRef = A8FB8F7AD136482CB8D1D5BA /* modules.c */; };
@@ -83,6 +84,7 @@
 		1E91C010B4087F4222A4D650 /* thread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = thread.c; path = ../../deps/libuv/src/unix/thread.c; sourceTree = "<group>"; };
 		26823A190AC9424B8EB67059 /* version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = version.h; path = ../../deps/libuv/include/uv/version.h; sourceTree = "<group>"; };
 		29EA0991BC77D383255077D1 /* threadpool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = threadpool.c; path = ../../deps/libuv/src/threadpool.c; sourceTree = "<group>"; };
+		301353E056398392BD407A20 /* cgic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cgic.h; path = ../../deps/cgic/cgic.h; sourceTree = "<group>"; };
 		393495594919C18B358D4B99 /* stdint-msvc2008.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "stdint-msvc2008.h"; path = "../../deps/libuv/include/uv/stdint-msvc2008.h"; sourceTree = "<group>"; };
 		3BDB8853A90396C5AA968693 /* wren_value.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_value.h; path = ../../deps/wren/src/vm/wren_value.h; sourceTree = "<group>"; };
 		3C3B584A1B58727CF761CE8A /* loop-watcher.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "loop-watcher.c"; path = "../../deps/libuv/src/unix/loop-watcher.c"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		C84918F85DBFD82ACC5C2F38 /* stream.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = stream.c; path = ../../deps/libuv/src/unix/stream.c; sourceTree = "<group>"; };
 		CD8B5AEF6F74F6E1669C092F /* wren_compiler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_compiler.h; path = ../../deps/wren/src/vm/wren_compiler.h; sourceTree = "<group>"; };
 		D1349830E119C462CD8D4E70 /* darwin-proctitle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "darwin-proctitle.c"; path = "../../deps/libuv/src/unix/darwin-proctitle.c"; sourceTree = "<group>"; };
+		D33F3A56F9656A08606C6096 /* cgic.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = cgic.c; path = ../../deps/cgic/cgic.c; sourceTree = "<group>"; };
 		D69A4422EDACDF54DDC8DA62 /* path.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = path.c; path = ../../src/cli/path.c; sourceTree = "<group>"; };
 		D800B900F9CC663236818F40 /* dl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = dl.c; path = ../../deps/libuv/src/unix/dl.c; sourceTree = "<group>"; };
 		D8AD53A6C39979980B7F41E6 /* repl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = repl.h; path = ../../src/module/repl.h; sourceTree = "<group>"; };
@@ -207,6 +210,15 @@
 				A8EC0A02B576BC74305B8842 /* wren_opt_random.h */,
 			);
 			name = optional;
+			sourceTree = "<group>";
+		};
+		57634B8F641FFB01D90A69CF /* cgic */ = {
+			isa = PBXGroup;
+			children = (
+				D33F3A56F9656A08606C6096 /* cgic.c */,
+				301353E056398392BD407A20 /* cgic.h */,
+			);
+			name = cgic;
 			sourceTree = "<group>";
 		};
 		5775D4184366DFCA959E7A58 /* src */ = {
@@ -350,6 +362,7 @@
 		CE2ACC607A8D8C92391602A0 /* deps */ = {
 			isa = PBXGroup;
 			children = (
+				57634B8F641FFB01D90A69CF /* cgic */,
 				63BE97C79264EBB9EBA64607 /* libuv */,
 				A4F7631BB1B4128D269E815B /* wren */,
 			);
@@ -462,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E2B50E09C6AD001CDEE34E /* cgic.c in Sources */,
 				D4BB20BFE6E4FD711AD5E6FF /* fs-poll.c in Sources */,
 				A98FF85D3F06B78FADA30E9D /* idna.c in Sources */,
 				54A39645EA1A557758B6AC85 /* inet.c in Sources */,
@@ -532,6 +546,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
 				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = wren_cli_d;
 			};
 			name = Debug;
@@ -544,6 +559,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
 				INSTALL_PATH = /usr/local/bin;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = wren_cli;
 			};
 			name = Release;
@@ -575,6 +591,7 @@
 					../../deps/wren/include,
 					../../deps/wren/src/vm,
 					../../deps/wren/src/optional,
+					../../deps/cgic,
 					../../deps/libuv/include,
 					../../deps/libuv/src,
 				);
@@ -606,6 +623,7 @@
 					../../deps/wren/include,
 					../../deps/wren/src/vm,
 					../../deps/wren/src/optional,
+					../../deps/cgic,
 					../../deps/libuv/include,
 					../../deps/libuv/src,
 				);

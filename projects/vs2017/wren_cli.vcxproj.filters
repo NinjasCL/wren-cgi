@@ -4,6 +4,9 @@
     <Filter Include="deps">
       <UniqueIdentifier>{F1A1957C-DDD8-960D-86C5-7C1072DB120F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="deps\cgic">
+      <UniqueIdentifier>{D60DF865-4278-ACDC-8BB6-5D82F75F8A31}</UniqueIdentifier>
+    </Filter>
     <Filter Include="deps\libuv">
       <UniqueIdentifier>{E2A29D25-CE5A-DF72-3762-B8CE23397A63}</UniqueIdentifier>
     </Filter>
@@ -45,6 +48,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\deps\cgic\cgic.h">
+      <Filter>deps\cgic</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\deps\libuv\include\uv.h">
       <Filter>deps\libuv\include</Filter>
     </ClInclude>
@@ -194,6 +200,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\deps\cgic\cgic.c">
+      <Filter>deps\cgic</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\deps\libuv\src\fs-poll.c">
       <Filter>deps\libuv\src</Filter>
     </ClCompile>

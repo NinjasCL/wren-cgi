@@ -66,14 +66,22 @@ project "wren_cli"
     "../../deps/wren/include/**.h",
     "../../deps/wren/src/**.c",
     "../../deps/wren/src/**.h",
-    "../../deps/cgic/cgic.c",
-    "../../deps/cgic/cgic.h",
   }
 
   includedirs {
     "../../deps/wren/include",
     "../../deps/wren/src/vm",
     "../../deps/wren/src/optional"
+  }
+
+-- cgic dependency
+  files {
+    "../../deps/cgic/**.c",
+    "../../deps/cgic/**.h",
+  }
+
+  includedirs {
+    "../../deps/cgic",
   }
 
 -- libuv dependency

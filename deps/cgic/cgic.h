@@ -6,6 +6,8 @@
 #ifndef CGI_C
 #define CGI_C 1
 
+#define CGIC_VERSION_STRING "2.0.8"
+
 /* Ensure proper linkage to c++ programs. */
 #ifdef __cplusplus
 extern "C" {
@@ -18,7 +20,7 @@ extern "C" {
 
 /* The various CGI environment variables. Instead of using getenv(),
 	the programmer should refer to these, which are always
-	valid null-terminated strings (they may be empty, but they 
+	valid null-terminated strings (they may be empty, but they
 	will never be null). If these variables are used instead
 	of calling getenv(), then it will be possible to save
 	and restore CGI environments, which is highly convenient
@@ -124,12 +126,12 @@ extern cgiFormResultType cgiFormDoubleBounded(
 	char *name, double *result, double min, double max, double defaultV);
 
 extern cgiFormResultType cgiFormSelectSingle(
-	char *name, char **choicesText, int choicesTotal, 
-	int *result, int defaultV);	
+	char *name, char **choicesText, int choicesTotal,
+	int *result, int defaultV);
 
 
 extern cgiFormResultType cgiFormSelectMultiple(
-	char *name, char **choicesText, int choicesTotal, 
+	char *name, char **choicesText, int choicesTotal,
 	int *result, int *invalid);
 
 /* Just an alias; users have asked for this */
@@ -139,12 +141,12 @@ extern cgiFormResultType cgiFormCheckboxSingle(
 	char *name);
 
 extern cgiFormResultType cgiFormCheckboxMultiple(
-	char *name, char **valuesText, int valuesTotal, 
+	char *name, char **valuesText, int valuesTotal,
 	int *result, int *invalid);
 
 extern cgiFormResultType cgiFormRadio(
-	char *name, char **valuesText, int valuesTotal, 
-	int *result, int defaultV);	
+	char *name, char **valuesText, int valuesTotal,
+	int *result, int defaultV);
 
 /* The paths returned by this function are the original names of files
 	as reported by the uploading web browser and shoult NOT be
@@ -187,7 +189,7 @@ typedef enum {
 	cgiCookieSameSiteStrict = 4
 } cgiCookieOption;
 
-/* path can be null or empty in which case a path of / (entire site) is set. 
+/* path can be null or empty in which case a path of / (entire site) is set.
 	domain can be a single web site; if it is an entire domain, such as
 	'boutell.dev', it should begin with a dot: '.boutell.dev' */
 extern void cgiHeaderCookieSet(char *name, char *value,
@@ -215,12 +217,12 @@ extern int cgiMain();
 extern cgiFormResultType cgiFormEntries(
 	char ***ptrToStringArray);
 
-/* Output string with the <, &, and > characters HTML-escaped. 
+/* Output string with the <, &, and > characters HTML-escaped.
 	's' is null-terminated. Returns cgiFormIO in the event
 	of error, cgiFormSuccess otherwise. */
 cgiFormResultType cgiHtmlEscape(const char *s);
 
-/* Output data with the <, &, and > characters HTML-escaped. 
+/* Output data with the <, &, and > characters HTML-escaped.
 	'data' is not null-terminated; 'len' is the number of
 	bytes in 'data'. Returns cgiFormIO in the event
 	of error, cgiFormSuccess otherwise. */

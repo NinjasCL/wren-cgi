@@ -34,12 +34,12 @@ static char* readFile(const char* path)
 {
   FILE* file = fopen(path, "rb");
   if (file == NULL) return NULL;
-  
+
   // Find out how big the file is.
   fseek(file, 0L, SEEK_END);
   size_t fileSize = ftell(file);
   rewind(file);
-  
+
   // Allocate a buffer for it.
   char* buffer = (char*)malloc(fileSize + 1);
   if (buffer == NULL)
@@ -47,7 +47,7 @@ static char* readFile(const char* path)
     fprintf(stderr, "Could not read file \"%s\".\n", path);
     exit(74);
   }
-  
+
   // Read the entire file.
   size_t bytesRead = fread(buffer, 1, fileSize, file);
   if (bytesRead < fileSize)
@@ -55,10 +55,10 @@ static char* readFile(const char* path)
     fprintf(stderr, "Could not read file \"%s\".\n", path);
     exit(74);
   }
-  
+
   // Terminate the string.
   buffer[bytesRead] = '\0';
-  
+
   fclose(file);
   return buffer;
 }
@@ -68,10 +68,10 @@ static bool isDirectory(Path* path)
   uv_fs_t request;
   uv_fs_stat(loop, &request, path->chars, NULL);
   // TODO: Check request.result value?
-  
-  bool result = request.result == 0 && 
+
+  bool result = request.result == 0 &&
       (request.statbuf.st_mode & S_IFDIR);
-  
+
   uv_fs_req_cleanup(&request);
   return result;
 }
@@ -80,9 +80,9 @@ static Path* realPath(Path* path)
 {
   uv_fs_t request;
   uv_fs_realpath(loop, &request, path->chars, NULL);
-  
+
   Path* result = pathNew((char*)request.ptr);
-  
+
   uv_fs_req_cleanup(&request);
   return result;
 }
@@ -95,7 +95,7 @@ static Path* realPath(Path* path)
 static void findModulesDirectory()
 {
   if (wrenModulesDirectory != NULL) return;
-  
+
   Path* searchDirectory = pathNew(rootDirectory);
   Path* lastPath = realPath(searchDirectory);
 
@@ -104,16 +104,16 @@ static void findModulesDirectory()
   {
     Path* modulesDirectory = pathNew(searchDirectory->chars);
     pathJoin(modulesDirectory, "wren_modules");
-    
+
     if (isDirectory(modulesDirectory))
     {
       pathNormalize(modulesDirectory);
       wrenModulesDirectory = modulesDirectory;
       break;
     }
-    
+
     pathFree(modulesDirectory);
-    
+
     // Walk up directories until we hit the root. We can tell that because
     // adding ".." yields the same real path.
     pathJoin(searchDirectory, "..");
@@ -123,11 +123,11 @@ static void findModulesDirectory()
       pathFree(thisPath);
       break;
     }
-    
+
     pathFree(lastPath);
     lastPath = thisPath;
   }
-  
+
   pathFree(lastPath);
   pathFree(searchDirectory);
 }
@@ -144,17 +144,17 @@ static const char* resolveModule(WrenVM* vm, const char* importer,
 {
   // Logical import strings are used as-is and need no resolution.
   if (pathType(module) == PATH_TYPE_SIMPLE) return module;
-  
+
   // Get the directory containing the importing module.
   Path* path = pathNew(importer);
   pathDirName(path);
-  
+
   // Add the relative import path.
   pathJoin(path, module);
-  
+
   pathNormalize(path);
   char* resolved = pathToString(path);
-  
+
   pathFree(path);
   return resolved;
 }
@@ -173,14 +173,14 @@ static char* readModule(WrenVM* vm, const char* module)
     // we can handle are built-in ones. Let the VM try to handle it.
     findModulesDirectory();
     if (wrenModulesDirectory == NULL) return readBuiltInModule(module);
-    
+
     // TODO: Should we explicitly check for the existence of the module's base
     // directory inside "wren_modules" here?
-    
+
     // Look up the module in "wren_modules".
     filePath = pathNew(wrenModulesDirectory->chars);
     pathJoin(filePath, module);
-    
+
     // If the module is a single bare name, treat it as a module with the same
     // name inside the package. So "foo" means "foo/foo".
     if (strchr(module, '/') == NULL) pathJoin(filePath, module);
@@ -190,13 +190,13 @@ static char* readModule(WrenVM* vm, const char* module)
     // The module path is already a file path.
     filePath = pathNew(module);
   }
-  
+
   // Add a ".wren" file extension.
   pathAppendString(filePath, ".wren");
 
   char* source = readFile(filePath->chars);
   pathFree(filePath);
-  
+
   // If we didn't find it, it may be a module built into the CLI or VM, so keep
   // going.
   if (source != NULL) return source;
@@ -213,7 +213,7 @@ static WrenForeignMethodFn bindForeignMethod(WrenVM* vm, const char* module,
   WrenForeignMethodFn method = bindBuiltInForeignMethod(vm, module, className,
                                                         isStatic, signature);
   if (method != NULL) return method;
-  
+
   if (bindMethodFn != NULL)
   {
     return bindMethodFn(vm, module, className, isStatic, signature);
@@ -252,11 +252,11 @@ static void reportError(WrenVM* vm, WrenErrorType type,
     case WREN_ERROR_COMPILE:
       fprintf(stderr, "[%s line %d] %s\n", module, line, message);
       break;
-      
+
     case WREN_ERROR_RUNTIME:
       fprintf(stderr, "%s\n", message);
       break;
-      
+
     case WREN_ERROR_STACK_TRACE:
       fprintf(stderr, "[%s line %d] in %s\n", module, line, message);
       break;
@@ -288,14 +288,14 @@ static void freeVM()
 {
   ioShutdown();
   schedulerShutdown();
-  
+
   uv_loop_close(loop);
   free(loop);
-  
+
   wrenFreeVM(vm);
 
   uv_tty_reset_mode();
-  
+
   if (wrenModulesDirectory != NULL) pathFree(wrenModulesDirectory);
 }
 
@@ -330,17 +330,17 @@ WrenInterpretResult runFile(const char* path)
   // Use the directory where the file is as the root to resolve imports
   // relative to.
   Path* directory = pathNew(module->chars);
-  
+
   pathDirName(directory);
   rootDirectory = pathToString(directory);
   pathFree(directory);
-  
+
   initVM();
 
   WrenInterpretResult result = wrenInterpret(vm, module->chars, source);
 
   if (afterLoadFn != NULL) afterLoadFn(vm);
-  
+
   if (result == WREN_RESULT_SUCCESS)
   {
     uv_run(loop, UV_RUN_DEFAULT);
@@ -365,14 +365,14 @@ WrenInterpretResult runRepl()
   printf(" \\_/   wren v%s\n", WREN_VERSION_STRING);
 
   WrenInterpretResult result = wrenInterpret(vm, "<repl>", "import \"repl\"\n");
-  
+
   if (result == WREN_RESULT_SUCCESS)
   {
     uv_run(loop, UV_RUN_DEFAULT);
   }
 
   freeVM();
-  
+
   return result;
 }
 
