@@ -21,12 +21,10 @@ void ENV_f_get(WrenVM * vm) {
   }
 
   if (result != 0) {
-    wrenSetSlotString(vm, 0, "Cannot get the environment variable.");
-    wrenAbortFiber(vm, 0);
-    return;
+    wrenSetSlotString(vm, 0, "");
+  } else {
+    wrenSetSlotString(vm, 0, buffer);
   }
-
-  wrenSetSlotString(vm, 0, buffer);
 
   // If the final buffer required more than the default
   // free the memory
