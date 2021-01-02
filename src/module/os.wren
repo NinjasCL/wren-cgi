@@ -4,6 +4,19 @@ class Platform {
   foreign static name
 
   static isWindows { name == "Windows" }
+
+  static home {homedir}
+
+  // End of line separator character
+  static eol {isWindows ? "\r\n" : "\n"}
+
+  // Directory separator character
+  static dirsep {isWindows ? "\\" : "/"}
+  static directorySeparator {dirsep}
+
+  // PATH separator character
+  static pathsep {isWindows ? ";" : ":"}
+  static pathSeparator {pathsep}
 }
 
 class Process {
@@ -16,4 +29,6 @@ class Process {
   foreign static ppid
   foreign static exePath
   foreign static version
+
+  static path {exePath}
 }

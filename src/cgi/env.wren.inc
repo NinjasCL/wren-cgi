@@ -34,4 +34,5 @@ static const char* envModuleSource =
 "*/\n"
 "class Get {\n"
 "  foreign static f_query\n"
+"  static query {f_query}\n"
 "}\n";

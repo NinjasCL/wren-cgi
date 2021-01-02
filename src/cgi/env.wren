@@ -32,4 +32,5 @@ but rather for all requests with a query string.
 */
 class Get {
   foreign static f_query
+  static query {f_query}
 }
