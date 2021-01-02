@@ -32,5 +32,4 @@ extern void GET_f_query(WrenVM * vm);
       STATIC_METHOD("f_query", GET_f_query) \
     END_CLASS \
   END_MODULE
-
 #endif

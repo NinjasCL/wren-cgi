@@ -8,10 +8,12 @@ class Platform {
   static home {homedir}
 
   // End of line separator character
-  static eol {isWindows ? "\r\n" : "\n"}
+  // Additional escaping chars set for generating correct
+  // .inc file
+  static eol {isWindows ? "\\r\\n" : "\\n"}
 
   // Directory separator character
-  static dirsep {isWindows ? "\\" : "/"}
+  static dirsep {isWindows ? "\\\\" : "/"}
   static directorySeparator {dirsep}
 
   // PATH separator character

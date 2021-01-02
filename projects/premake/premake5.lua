@@ -59,6 +59,7 @@ project "wren_cli"
     "../../src/cli",
     "../../src/module",
     "../../src/cgi",
+    "../../src/cgi/**",
   }
 
 -- wren dependency

@@ -1,4 +1,4 @@
-// Generated automatically from ./src/cgi/env.wren. Do not edit.
+// Generated automatically from ./src/cgi/env/env.wren. Do not edit.
 static const char* envModuleSource =
 "\n"
 "class Env {\n"
