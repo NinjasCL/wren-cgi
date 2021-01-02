@@ -189,6 +189,9 @@
     <ClInclude Include="..\..\src\cli\path.h">
       <Filter>src\cli</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cli\registry.h">
+      <Filter>src\cli</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\cli\stat.h">
       <Filter>src\cli</Filter>
     </ClInclude>

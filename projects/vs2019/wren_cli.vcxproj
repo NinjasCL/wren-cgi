@@ -328,6 +328,7 @@
     <ClInclude Include="..\..\src\cgi\env.h" />
     <ClInclude Include="..\..\src\cli\modules.h" />
     <ClInclude Include="..\..\src\cli\path.h" />
+    <ClInclude Include="..\..\src\cli\registry.h" />
     <ClInclude Include="..\..\src\cli\stat.h" />
     <ClInclude Include="..\..\src\cli\version.h" />
     <ClInclude Include="..\..\src\cli\vm.h" />

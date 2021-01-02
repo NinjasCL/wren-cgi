@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "modules.h"
+#include "registry.h"
 
 #include "io.wren.inc"
 #include "os.wren.inc"
@@ -51,11 +52,14 @@ extern void stdinIsRawSet(WrenVM* vm);
 extern void stdinIsTerminal(WrenVM* vm);
 extern void stdinReadStart(WrenVM* vm);
 extern void stdinReadStop(WrenVM* vm);
+
 extern void stdoutFlush(WrenVM* vm);
+extern void stdoutWrite(WrenVM* vm);
+
 extern void schedulerCaptureMethods(WrenVM* vm);
 extern void timerStartTimer(WrenVM* vm);
 
-#import "cgimodules.h"
+#include "cgimodules.h"
 
 // The maximum number of foreign methods a single class defines. Ideally, we
 // would use variable-length arrays for each class in the table below, but
@@ -104,22 +108,7 @@ typedef struct
   ClassRegistry classes[MAX_CLASSES_PER_MODULE];
 } ModuleRegistry;
 
-// To locate foreign classes and modules, we build a big directory for them in
-// static data. The nested collection initializer syntax gets pretty noisy, so
-// define a couple of macros to make it easier.
-#define SENTINEL_METHOD { false, NULL, NULL }
-#define SENTINEL_CLASS { NULL, { SENTINEL_METHOD } }
-#define SENTINEL_MODULE {NULL, NULL, { SENTINEL_CLASS } }
 
-#define MODULE(name) { #name, &name##ModuleSource, {
-#define END_MODULE SENTINEL_CLASS } },
-
-#define CLASS(name) { #name, {
-#define END_CLASS SENTINEL_METHOD } },
-
-#define METHOD(signature, fn) { false, signature, fn },
-#define STATIC_METHOD(signature, fn) { true, signature, fn },
-#define FINALIZER(fn) { true, "<finalize>", (WrenForeignMethodFn)fn },
 
 // The array of built-in modules.
 static ModuleRegistry modules[] =
@@ -166,6 +155,7 @@ static ModuleRegistry modules[] =
     END_CLASS
     CLASS(Stdout)
       STATIC_METHOD("flush()", stdoutFlush)
+      STATIC_METHOD("write_(_)", stdoutWrite)
     END_CLASS
   END_MODULE
   MODULE(os)
@@ -196,13 +186,7 @@ static ModuleRegistry modules[] =
     END_CLASS
   END_MODULE
 
-  // Wren CGI modules
-  MODULE(env)
-    CLASS(Env)
-      STATIC_METHOD("f_get(_)", ENV_f_get)
-      STATIC_METHOD("f_all", ENV_f_all)
-    END_CLASS
-  END_MODULE
+  CGIMODULES
 
   SENTINEL_MODULE
 };

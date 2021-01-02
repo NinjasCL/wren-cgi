@@ -302,4 +302,9 @@ static const char* ioModuleSource =
 "\n"
 "class Stdout {\n"
 "  foreign static flush()\n"
+"  // An alternative to System.write\n"
+"  // since System.write can be other than Stdout\n"
+"  foreign static write_(text)\n"
+"  static write(text) {write_(text.toString)}\n"
+"  static print(text) {write_(text.toString + \"\n\")}\n"
 "}\n";

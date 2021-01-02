@@ -70,6 +70,7 @@
 		039D8737D1C0DAE958CF2D77 /* darwin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = darwin.h; path = ../../deps/libuv/include/uv/darwin.h; sourceTree = "<group>"; };
 		0424D20BC6E5327D241A104B /* wren_primitive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = wren_primitive.h; path = ../../deps/wren/src/vm/wren_primitive.h; sourceTree = "<group>"; };
 		055E63F5A84C8AA737726A35 /* env.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = env.c; path = ../../src/cgi/env.c; sourceTree = "<group>"; };
+		05EF3F8427BAECB6647015C4 /* registry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = registry.h; path = ../../src/cli/registry.h; sourceTree = "<group>"; };
 		08DCB67379FF57652FC604B3 /* heap-inl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "heap-inl.h"; path = "../../deps/libuv/src/heap-inl.h"; sourceTree = "<group>"; };
 		098B94624D9F65944170EAA2 /* atomic-ops.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "atomic-ops.h"; path = "../../deps/libuv/src/unix/atomic-ops.h"; sourceTree = "<group>"; };
 		0A65426939F7115B150450A9 /* uv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = uv.h; path = ../../deps/libuv/include/uv.h; sourceTree = "<group>"; };
@@ -266,6 +267,7 @@
 				950389A4BD3E4256A4D9CFE4 /* modules.h */,
 				D69A4422EDACDF54DDC8DA62 /* path.c */,
 				C000D86CD713739EC72F6EAC /* path.h */,
+				05EF3F8427BAECB6647015C4 /* registry.h */,
 				0F964BCA26A8E6FC16C4E20A /* stat.h */,
 				5778FDDE7FB3B690674F441E /* version.h */,
 				F460E68EF7D1B8C0793E5CCE /* vm.c */,

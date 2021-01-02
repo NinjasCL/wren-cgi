@@ -22,3 +22,14 @@ class Env {
     return env
   }
 }
+
+/*
+A map of variables
+passed to the current script via the URL parameters
+(aka. query string).
+Note that the map is not only populated for GET requests,
+but rather for all requests with a query string.
+*/
+class Get {
+  foreign static f_query
+}

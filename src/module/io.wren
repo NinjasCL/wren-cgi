@@ -300,4 +300,9 @@ class Stdin {
 
 class Stdout {
   foreign static flush()
+  // An alternative to System.write
+  // since System.write can be other than Stdout
+  foreign static write_(text)
+  static write(text) {write_(text.toString)}
+  static print(text) {write_(text.toString + "\n")}
 }
