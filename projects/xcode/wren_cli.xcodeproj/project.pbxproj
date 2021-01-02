@@ -139,6 +139,7 @@
 		AA867014A4482C86DE472E54 /* scheduler.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = scheduler.c; path = ../../src/module/scheduler.c; sourceTree = "<group>"; };
 		AAB8F95EA47AB5D0DE79B79E /* scheduler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = scheduler.h; path = ../../src/module/scheduler.h; sourceTree = "<group>"; };
 		AB34E108A4F69D7ADEF59F48 /* io.wren.inc */ = {isa = PBXFileReference; lastKnownFileType = text; name = io.wren.inc; path = ../../src/module/io.wren.inc; sourceTree = "<group>"; };
+		AC45B4A5F9A8AAD76FC7AAE5 /* cgimodules.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = cgimodules.h; path = ../../src/cgi/cgimodules.h; sourceTree = "<group>"; };
 		B5B5E367AF779FD9E976A1A7 /* strscpy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = strscpy.h; path = ../../deps/libuv/src/strscpy.h; sourceTree = "<group>"; };
 		B6BDE0D123E5EF432578DF11 /* wren_utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wren_utils.c; path = ../../deps/wren/src/vm/wren_utils.c; sourceTree = "<group>"; };
 		B719EEBD2441FD2F25D4ECFD /* wren_debug.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = wren_debug.c; path = ../../deps/wren/src/vm/wren_debug.c; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 		744950E5C45CE59746DB1725 /* cgi */ = {
 			isa = PBXGroup;
 			children = (
+				AC45B4A5F9A8AAD76FC7AAE5 /* cgimodules.h */,
 				055E63F5A84C8AA737726A35 /* env.c */,
 				4316539FE6047A51752A59DF /* env.h */,
 				EC2A4157398D3789AFAC3797 /* env.wren.inc */,

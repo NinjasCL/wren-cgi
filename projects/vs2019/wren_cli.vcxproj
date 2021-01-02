@@ -324,6 +324,7 @@
     <ClInclude Include="..\..\deps\wren\src\vm\wren_utils.h" />
     <ClInclude Include="..\..\deps\wren\src\vm\wren_value.h" />
     <ClInclude Include="..\..\deps\wren\src\vm\wren_vm.h" />
+    <ClInclude Include="..\..\src\cgi\cgimodules.h" />
     <ClInclude Include="..\..\src\cgi\env.h" />
     <ClInclude Include="..\..\src\cli\modules.h" />
     <ClInclude Include="..\..\src\cli\path.h" />

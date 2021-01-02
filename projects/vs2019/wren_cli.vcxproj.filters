@@ -177,6 +177,9 @@
     <ClInclude Include="..\..\deps\wren\src\vm\wren_vm.h">
       <Filter>deps\wren\src\vm</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\cgi\cgimodules.h">
+      <Filter>src\cgi</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\src\cgi\env.h">
       <Filter>src\cgi</Filter>
     </ClInclude>

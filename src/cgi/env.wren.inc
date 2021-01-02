@@ -2,7 +2,7 @@
 static const char* envModuleSource =
 "\n"
 "class Env {\n"
-"  // Segmentation fault if pass null\n"
+"  // Segmentation fault if name arg is null\n"
 "  // so a wrapper is needed for public api\n"
 "  foreign static f_get(name)\n"
 "  static get(name) {\n"
@@ -10,5 +10,14 @@ static const char* envModuleSource =
 "      return f_get(name)\n"
 "    }\n"
 "    return \"\"\n"
+"  }\n"
+"\n"
+"  foreign static f_all\n"
+"  static all {\n"
+"    var env = {}\n"
+"    f_all.each{|name|\n"
+"      env[name] = f_get(name)\n"
+"    }\n"
+"    return env\n"
 "  }\n"
 "}\n";
