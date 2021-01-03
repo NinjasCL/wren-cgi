@@ -58,24 +58,34 @@ class Server {
 }
 
 class Request {
+
+  foreign static f_content_type
+  foreign static f_content_length
+
+  static type {f_content_type}
+  static length {f_content_length}
+
   static uri {Env.get("REQUEST_URI")}
   static method {Env.get("REQUEST_METHOD")}
   static auth {Env.get("AUTH_TYPE")}
-  static type {Env.get("CONTENT_TYPE")}
-  static length {Env.get("CONTENT_LENGTH")}
+
   static query {Env.get("QUERY_STRING")}
   static host {Env.get("REMOTE_HOST")}
   static port {Env.get("REMOTE_PORT")}
   static address {Env.get("REMOTE_ADDR")}
+
   static user {Env.get("REMOTE_USER")}
   static ident {Env.get("REMOTE_IDENT")}
   static accept {Env.get("HTTP_ACCEPT")}
+
   static agent {Env.get("HTTP_USER_AGENT")}
   static referer {Env.get("HTTP_REFERER")}
   static cookie {Env.get("HTTP_COOKIE")}
+
   static language {Env.get("HTTP_ACCEPT_LANGUAGE")}
   static scheme {Env.get("REQUEST_SCHEME")}
   static connection {Env.get("HTTP_CONNECTION")}
+
   static dnt {Env.get("HTTP_DNT")}
   static gpc {Env.get("HTTP_SEC_GPC")}
   static encoding {Env.get("HTTP_ACCEPT_ENCODING")}

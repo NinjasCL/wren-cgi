@@ -16,6 +16,10 @@
     END_CLASS \
     CLASS(Request) \
     END_CLASS \
+    CLASS(HTTPStatus) \
+    END_CLASS \
+    CLASS(MimeType) \
+    END_CLASS \
   END_MODULE
 
 #endif

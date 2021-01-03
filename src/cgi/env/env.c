@@ -70,15 +70,27 @@ void ENV_f_all(WrenVM * vm) {
 // These two functions. Set and Remove
 // Must have proper security measures before
 // becoming a public API.
+// Example: https://www.php.net/manual/en/function.putenv.php
+//
 // http://docs.libuv.org/en/latest/misc.html?#c.uv_os_setenv
-void ENV_f_set(WrenVM * vm) {
-  const char * name = wrenGetSlotString(vm, 1);
-  const char * value = wrenGetSlotString(vm, 2);
-  uv_os_setenv(name, value);
+// void ENV_f_set(WrenVM * vm) {
+//   const char * name = wrenGetSlotString(vm, 1);
+//   const char * value = wrenGetSlotString(vm, 2);
+//   uv_os_setenv(name, value);
+// }
+// // http://docs.libuv.org/en/latest/misc.html?#c.uv_os_unsetenv
+// void ENV_f_remove(WrenVM * vm) {
+//   const char * name = wrenGetSlotString(vm, 1);
+//   uv_os_unsetenv(name);
+// }
+
+
+void REQUEST_f_content_type(WrenVM * vm) {
+  wrenEnsureSlots(vm, 1);
+  wrenSetSlotString(vm, 0, cgiContentType);
 }
 
-// http://docs.libuv.org/en/latest/misc.html?#c.uv_os_unsetenv
-void ENV_f_remove(WrenVM * vm) {
-  const char * name = wrenGetSlotString(vm, 1);
-  uv_os_unsetenv(name);
+void REQUEST_f_content_length(WrenVM * vm) {
+  wrenEnsureSlots(vm, 1);
+  wrenSetSlotDouble(vm, 0, cgiContentLength);
 }
