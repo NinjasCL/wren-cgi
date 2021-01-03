@@ -1,7 +1,5 @@
 // Generated automatically from ./src/cgi/env/env.wren. Do not edit.
 static const char* envModuleSource =
-"import { type } from \"os\"\n"
-"\n"
 "class Env {\n"
 "  // Segmentation fault if name arg is null\n"
 "  // so a wrapper is needed for public api\n"
@@ -34,6 +32,7 @@ static const char* envModuleSource =
 "  static address {Env.get(\"SERVER_ADDR\")}\n"
 "  static gateway {Env.get(\"GATEWAY_INTERFACE\")}\n"
 "  static script {Env.get(\"SCRIPT_NAME\")}\n"
+"  static path {Env.get(\"PATH\")}\n"
 "  static pathInfo {Env.get(\"PATH_INFO\")}\n"
 "  static pathTranslated {Env.get(\"PATH_TRANSLATED\")}\n"
 "  static signature {Env.get(\"SERVER_SIGNATURE\")}\n"
@@ -68,6 +67,7 @@ static const char* envModuleSource =
 "  static length {Env.get(\"CONTENT_LENGTH\")}\n"
 "  static query {Env.get(\"QUERY_STRING\")}\n"
 "  static host {Env.get(\"REMOTE_HOST\")}\n"
+"  static port {Env.get(\"REMOTE_PORT\")}\n"
 "  static address {Env.get(\"REMOTE_ADDR\")}\n"
 "  static user {Env.get(\"REMOTE_USER\")}\n"
 "  static ident {Env.get(\"REMOTE_IDENT\")}\n"

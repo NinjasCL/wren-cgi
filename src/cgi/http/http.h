@@ -14,6 +14,8 @@
     END_CLASS \
     CLASS(Status) \
     END_CLASS \
+    CLASS(Request) \
+    END_CLASS \
   END_MODULE
 
 #endif

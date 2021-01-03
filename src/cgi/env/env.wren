@@ -1,5 +1,3 @@
-import { type } from "os"
-
 class Env {
   // Segmentation fault if name arg is null
   // so a wrapper is needed for public api
@@ -32,6 +30,7 @@ class Server {
   static address {Env.get("SERVER_ADDR")}
   static gateway {Env.get("GATEWAY_INTERFACE")}
   static script {Env.get("SCRIPT_NAME")}
+  static path {Env.get("PATH")}
   static pathInfo {Env.get("PATH_INFO")}
   static pathTranslated {Env.get("PATH_TRANSLATED")}
   static signature {Env.get("SERVER_SIGNATURE")}
@@ -66,6 +65,7 @@ class Request {
   static length {Env.get("CONTENT_LENGTH")}
   static query {Env.get("QUERY_STRING")}
   static host {Env.get("REMOTE_HOST")}
+  static port {Env.get("REMOTE_PORT")}
   static address {Env.get("REMOTE_ADDR")}
   static user {Env.get("REMOTE_USER")}
   static ident {Env.get("REMOTE_IDENT")}

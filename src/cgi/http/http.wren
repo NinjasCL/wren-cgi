@@ -1,6 +1,10 @@
 import "os" for Platform
+import "env" for Request
 
 class Response {
+  static headers {Headers}
+  static status {Status}
+
   static echobag_ {
     if (!__echobag) {
       __echobag = []
@@ -71,5 +75,5 @@ class Status {
   }
 
   static ok(message) {set(200, message)}
-  static ok() {ok("")}
+  static ok() {ok("OK")}
 }

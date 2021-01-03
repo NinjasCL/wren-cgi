@@ -1,8 +1,12 @@
 // Generated automatically from ./src/cgi/http/http.wren. Do not edit.
 static const char* httpModuleSource =
 "import \"os\" for Platform\n"
+"import \"env\" for Request\n"
 "\n"
 "class Response {\n"
+"  static headers {Headers}\n"
+"  static status {Status}\n"
+"\n"
 "  static echobag_ {\n"
 "    if (!__echobag) {\n"
 "      __echobag = []\n"
@@ -73,5 +77,5 @@ static const char* httpModuleSource =
 "  }\n"
 "\n"
 "  static ok(message) {set(200, message)}\n"
-"  static ok() {ok(\"\")}\n"
+"  static ok() {ok(\"OK\")}\n"
 "}\n";
