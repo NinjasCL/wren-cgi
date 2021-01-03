@@ -18,18 +18,15 @@ extern void ENV_f_all(WrenVM * vm);
 extern void ENV_f_set(WrenVM * vm);
 extern void ENV_f_remove(WrenVM * vm);
 
-// get class
-extern void GET_f_query(WrenVM * vm);
-
-
 #define CGI_ENV_MODULES \
   MODULE(env) \
     CLASS(Env) \
       STATIC_METHOD("f_get(_)", ENV_f_get) \
       STATIC_METHOD("f_all", ENV_f_all) \
     END_CLASS \
-    CLASS(Get) \
-      STATIC_METHOD("f_query", GET_f_query) \
+    CLASS(Request) \
+    END_CLASS \
+    CLASS(Server) \
     END_CLASS \
   END_MODULE
 #endif

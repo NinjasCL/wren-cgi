@@ -163,7 +163,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -185,7 +185,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -207,7 +207,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NDEBUG;WREN_NAN_TAGGING=0;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -229,7 +229,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -248,7 +248,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -267,7 +267,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DEBUG;WREN_NAN_TAGGING=0;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\response;..\..\src\cgi\env;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\src\cli;..\..\src\module;..\..\src\cgi;..\..\src\cgi\env;..\..\src\cgi\http;..\..\deps\wren\include;..\..\deps\wren\src\vm;..\..\deps\wren\src\optional;..\..\deps\cgic;..\..\deps\libuv\include;..\..\deps\libuv\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -326,7 +326,7 @@
     <ClInclude Include="..\..\deps\wren\src\vm\wren_vm.h" />
     <ClInclude Include="..\..\src\cgi\cgimodules.h" />
     <ClInclude Include="..\..\src\cgi\env\env.h" />
-    <ClInclude Include="..\..\src\cgi\response\response.h" />
+    <ClInclude Include="..\..\src\cgi\http\http.h" />
     <ClInclude Include="..\..\src\cli\modules.h" />
     <ClInclude Include="..\..\src\cli\path.h" />
     <ClInclude Include="..\..\src\cli\registry.h" />
@@ -399,7 +399,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\src\cgi\env\env.wren.inc" />
-    <None Include="..\..\src\cgi\response\response.wren.inc" />
+    <None Include="..\..\src\cgi\http\http.wren.inc" />
     <None Include="..\..\src\module\io.wren.inc" />
     <None Include="..\..\src\module\os.wren.inc" />
     <None Include="..\..\src\module\repl.wren.inc" />

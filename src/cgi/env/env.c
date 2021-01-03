@@ -82,9 +82,3 @@ void ENV_f_remove(WrenVM * vm) {
   const char * name = wrenGetSlotString(vm, 1);
   uv_os_unsetenv(name);
 }
-
-
-void GET_f_query(WrenVM * vm) {
-  wrenEnsureSlots(vm, 1);
-  wrenSetSlotString(vm, 0, cgiQueryString);
-}

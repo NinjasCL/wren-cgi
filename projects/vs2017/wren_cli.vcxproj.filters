@@ -46,8 +46,8 @@
     <Filter Include="src\cgi\env">
       <UniqueIdentifier>{E7038AC9-53B9-02BF-DCAD-FC954862F9C2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\cgi\response">
-      <UniqueIdentifier>{AD38D1B5-9931-F007-C263-D58CAEBBCF13}</UniqueIdentifier>
+    <Filter Include="src\cgi\http">
+      <UniqueIdentifier>{9E3FCCFA-8AA2-5B9F-3328-94551F6A2722}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\cli">
       <UniqueIdentifier>{F4F22FA9-60D2-AE44-69EA-391BD54815A6}</UniqueIdentifier>
@@ -189,8 +189,8 @@
     <ClInclude Include="..\..\src\cgi\env\env.h">
       <Filter>src\cgi\env</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\cgi\response\response.h">
-      <Filter>src\cgi\response</Filter>
+    <ClInclude Include="..\..\src\cgi\http\http.h">
+      <Filter>src\cgi\http</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cli\modules.h">
       <Filter>src\cli</Filter>
@@ -394,8 +394,8 @@
     <None Include="..\..\src\cgi\env\env.wren.inc">
       <Filter>src\cgi\env</Filter>
     </None>
-    <None Include="..\..\src\cgi\response\response.wren.inc">
-      <Filter>src\cgi\response</Filter>
+    <None Include="..\..\src\cgi\http\http.wren.inc">
+      <Filter>src\cgi\http</Filter>
     </None>
     <None Include="..\..\src\module\io.wren.inc">
       <Filter>src\module</Filter>

@@ -19,6 +19,8 @@ a all:
 p premake:
 # Install premake in your PATH (normally /usr/local/bin)
 # https://premake.github.io/download.html#v5
+# Min version premake5 alpha 13
+# https://github.com/premake/premake-core/releases/tag/v5.0.0-alpha13
 # Add any dependency in projects/premake/premake5.lua
 	python3 util/generate_projects.py
 

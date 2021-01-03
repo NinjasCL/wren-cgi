@@ -2,10 +2,10 @@
 #define cgimods_h
 
 #include "env.h"
-#include "response.h"
+#include "http.h"
 
 #define CGIMODULES \
   CGI_ENV_MODULES \
-  CGI_RESPONSE_MODULES
+  CGI_HTTP_MODULES
 
 #endif

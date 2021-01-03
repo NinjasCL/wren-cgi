@@ -1,17 +1,18 @@
-#ifndef response_h
-#define response_h
+#ifndef http_h
+#define http_h
 
 #include "wren.h"
 #include "registry.h"
 
-// response.wren
-#include "response.wren.inc"
+#include "http.wren.inc"
 
-#define CGI_RESPONSE_MODULES \
-  MODULE(response) \
+#define CGI_HTTP_MODULES \
+  MODULE(http) \
     CLASS(Response) \
     END_CLASS \
     CLASS(Headers) \
+    END_CLASS \
+    CLASS(Status) \
     END_CLASS \
   END_MODULE
 
