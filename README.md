@@ -20,6 +20,17 @@ Some guides:
 - https://uwsgi-docs.readthedocs.io/en/latest/CGI.html
 - http://troglobit.github.io/2019/08/Basic-CGI-in-C-with-Merecat-httpd/
 
+More on CGI:
+
+- https://www.oreilly.com/openbook/cgi/ch01_01.html
+- https://tools.ietf.org/rfc/rfc3875
+- https://www.lemoda.net/cgi/simple-guide/index.html
+- https://www.lemoda.net/c/cgi-libraries/
+- https://www.w3.org/TR/html401/interact/forms.html#h-17.13.3
+- https://www.ietf.org/rfc/rfc2616.txt
+- http://jkorpela.fi/forms/cgic.html
+- https://www.linuxjournal.com/article/6863
+
 ---
 
 ## To build the Wren CGI
